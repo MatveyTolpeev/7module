@@ -1,0 +1,49 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Getting Started: Serving Web Content</title>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+  <style>
+    .d {
+      background-image:url(https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Clipboard.png);
+      width:16px;
+      height:16px;
+      display:inline-block;
+      vertical-align:bottom;
+    }
+    .f {
+      background-image:url(https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Script.png);
+      width:16px;
+      height:16px;
+      display:inline-block;
+      vertical-align:bottom;
+    }
+    .b {
+      background-image:url(https://cdn4.iconfinder.com/data/icons/6x16-free-application-icons/16/Trackback.png);
+      width:16px;
+      height:16px;
+      display:inline-block;
+      vertical-align:bottom;
+    }
+  </style>
+</head>
+<body>
+<p th:text="'Current directory: ' + ${name} + '.'" />
+<p th:text="'Time: ' + ${time} + '.'" />
+<div>
+  <span class="b"></span> <a th:href="${back}">Назад</a>
+</div>
+<br>
+
+  <div th:each="dir : ${dirs}">
+
+    <div th:if="${dir.isDirectory()}">
+      <span class="d"></span> <a th:href="${dir.name}" th:text="${dir.shortName}"></a>
+    </div>
+    <!-- ELSE -->
+    <div th:unless="${dir.isDirectory()}">
+      <span class="f"></span><a th:href="${dir.name}" th:text="' ' + ${dir.shortName}"></a>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,14 @@
+ru\service\db\filters\AuthFilter2.class
+ru\service\db\servlets\LogoutServlet.class
+ru\service\db\dao\DBException.class
+ru\service\db\servlets\DownloadServlet.class
+ru\service\db\dao\UserDAO.class
+ru\service\db\dao\UserProfile.class
+ru\service\db\servlets\LoginServlet.class
+ru\service\db\servlets\Main.class
+ru\service\db\servlets\FileDir.class
+ru\service\db\utils\HibernateSessionFactory.class
+ru\service\db\filters\AuthFilter.class
+ru\service\db\servlets\DirectoryServlet.class
+ru\service\db\servlets\SignUpServlet.class
+ru\service\db\dao\DBService.class
